@@ -1,0 +1,10 @@
+### Submit a test incident report
+POST http://localhost:8080/api/reports
+Authorization: Basic dXNlcjoxMjM0
+Content-Type: application/json
+
+{
+  "category": "BULLYING",
+  "description": "Test report for NIRBHAY API development.",
+  "location": "VIT Bhopal campus"
+}
