@@ -41,7 +41,8 @@ public class SecurityConfig {
                 "http://127.0.0.1:63342",
                 "http://127.0.0.1:61187",
                 "https://maanasb26.github.io",
-                "https://marvelous-bubblegum-da6bc5.netlify.app"
+                "https://marvelous-bubblegum-da6bc5.netlify.app",
+                "https://melodic-gumdrop-14820c.netlify.app"
         ));
 
         config.setAllowedMethods(
