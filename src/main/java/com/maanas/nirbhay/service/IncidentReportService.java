@@ -19,6 +19,12 @@ public class IncidentReportService {
     @Transactional
     public IncidentReport submitReport(IncidentReport report) {
 
+        if (report.getCaseId() == null ||
+                report.getCaseId().isBlank()) {
+            throw new IllegalArgumentException(
+                    "Case ID is required");
+        }
+
         if (report.getCategory() == null ||
                 report.getCategory().isBlank()) {
             throw new IllegalArgumentException(
@@ -31,7 +37,8 @@ public class IncidentReportService {
                     "Report description is required");
         }
 
-        report.setCategory(report.getCategory().trim());
+        report.setCaseId(report.getCaseId().trim());
+        report.setCategory(report.getCategory().trim().toUpperCase());
         report.setDescription(report.getDescription().trim());
 
         if (report.getLocation() != null) {

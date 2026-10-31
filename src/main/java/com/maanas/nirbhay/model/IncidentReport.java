@@ -8,9 +8,12 @@ import java.time.LocalDateTime;
 @Table(name = "incident_reports")
 public class IncidentReport {
 
-    @Id // Marks this field as the primary key of the table
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, unique = true, length = 50)
+    private String caseId;
 
     @Column(nullable = false, length = 50)
     private String category;
@@ -32,6 +35,14 @@ public class IncidentReport {
 
     public Long getId() {
         return id;
+    }
+
+    public String getCaseId() {
+        return caseId;
+    }
+
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
     }
 
     public String getCategory() {

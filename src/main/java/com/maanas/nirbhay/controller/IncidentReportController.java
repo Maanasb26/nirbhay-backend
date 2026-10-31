@@ -26,6 +26,7 @@ public class IncidentReportController {
             @Valid @RequestBody IncidentReportRequest request) {
 
         IncidentReport report = new IncidentReport();
+        report.setCaseId(request.getCaseId());
         report.setCategory(request.getCategory());
         report.setDescription(request.getDescription());
         report.setLocation(request.getLocation());

@@ -6,6 +6,10 @@ import jakarta.validation.constraints.Size;
 
 public class IncidentReportRequest {
 
+    @NotBlank(message = "Case ID is required")
+    @Size(max = 50, message = "Case ID must be at most 50 characters")
+    private String caseId;
+
     @NotBlank(message = "Category is required")
     @Size(max = 50, message = "Category must be at most 50 characters")
     private String category;
@@ -18,6 +22,14 @@ public class IncidentReportRequest {
     private String location;
 
     public IncidentReportRequest() {
+    }
+
+    public String getCaseId() {
+        return caseId;
+    }
+
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
     }
 
     public String getCategory() {
