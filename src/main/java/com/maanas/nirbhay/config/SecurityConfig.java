@@ -40,7 +40,8 @@ public class SecurityConfig {
                 "http://localhost:63342",
                 "http://127.0.0.1:63342",
                 "http://127.0.0.1:61187",
-                "https://maanasb26.github.io"
+                "https://maanasb26.github.io",
+                "https://marvelous-bubblegum-da6bc5.netlify.app"
         ));
 
         config.setAllowedMethods(
